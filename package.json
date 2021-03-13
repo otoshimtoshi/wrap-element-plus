@@ -1,14 +1,44 @@
 {
-  "name": "vue-wrap-element-ui",
+  "name": "@otoshimtoshi/wrap-element-plus",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build:gulp": "gulp build",
+    "build:vue": "vue-cli-service build",
+    "build:all": "gulp build && vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
+  "author": "Masatoshi Otoshi",
+  "keywords": [
+    "vue",
+    "element-plus"
+  ],
+  "license": "MIT",
+  "main": "dist/js/index.js",
+  "files": [
+    "dist",
+    "vetur"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:otoshimtoshi/wrap-element-plus.git"
+  },
+  "vetur": {
+    "tags": "vetur/tags.json",
+    "attributes": "vetur/attributes.json"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
   "dependencies": {
     "core-js": "^3.6.5",
+    "element-plus": "^1.0.2-beta.34",
     "vue": "^3.0.0"
   },
   "devDependencies": {
@@ -18,7 +48,12 @@
     "@vue/compiler-sfc": "^3.0.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0-0"
+    "eslint-plugin-vue": "^7.0.0-0",
+    "postcss": "^8.2.8",
+    "gulp": "^4.0.2",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-autoprefixer": "^7.0.1"
   },
   "eslintConfig": {
     "root": true,
@@ -33,10 +68,5 @@
       "parser": "babel-eslint"
     },
     "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+  }
 }

@@ -1,26 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <j-alert title="success alert" type="success"></j-alert>
+    <j-alert title="info alert" type="info"> </j-alert>
+    <j-alert title="warning alert" type="warning"> </j-alert>
+    <j-alert title="error alert" type="error"> </j-alert>
+  </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+<script lang="ts">
+import { reactive, defineComponent } from "vue";
+export default defineComponent({
+  name: "App",
+  setup() {
+    const state = reactive({});
+    return {
+      state,
+    };
+  },
+});
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
