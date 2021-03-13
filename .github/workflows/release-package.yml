@@ -14,7 +14,7 @@ jobs:
           node-version: 14
           registry-url: https://npm.pkg.github.com/
       - run: npm install
-      - run: npm build:all
+      - run: npm run build:all
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.PRIVATE_KEY}}
