@@ -1,6 +1,6 @@
-import Component from "./dropdown";
+import Component from './dropdown/index.vue'
 
 Component.install = function(Vue) {
-  Vue.Component(Component.name, Component);
-};
-export default Component;
+  Vue.Component(Component.name, Component)
+}
+export default Component

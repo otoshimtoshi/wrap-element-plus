@@ -1,4 +1,4 @@
-import Component from './backtop'
+import Component from './backtop/index.vue'
 
 Component.install = function(Vue) {
   Vue.Component(Component.name, Component)

@@ -4,7 +4,7 @@
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build:lib": "webpack --config ./build/webpack.config.js",
+    "build:lib": "webpack --config ./build/webpack.config.ts",
     "build:gulp": "gulp build",
     "build:vue": "vue-cli-service build",
     "build:all": "gulp build && vue-cli-service build",
@@ -43,6 +43,8 @@
     "vue": "^3.0.0"
   },
   "devDependencies": {
+    "@types/node": "^14.14.35",
+    "@types/webpack": "^4.41.26",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
@@ -58,6 +60,7 @@
     "postcss": "^8.2.8",
     "sass-loader": "^10.0.1",
     "ts-loader": "^8.0.18",
+    "ts-node": "^9.1.1",
     "typescript": "^4.2.3",
     "url-loader": "^4.1.1",
     "vue-loader": "^16.1.2",

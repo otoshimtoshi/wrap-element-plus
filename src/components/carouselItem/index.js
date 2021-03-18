@@ -1,4 +1,4 @@
-import Component from './carouselItem'
+import Component from './carouselItem/index.vue'
 
 Component.install = function(Vue) {
   Vue.Component(Component.name, Component)

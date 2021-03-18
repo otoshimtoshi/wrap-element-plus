@@ -1,6 +1,6 @@
-import Component from "./row";
+import Component from './row/index.vue'
 
 Component.install = function(Vue) {
-  Vue.Component(Component.name, Component);
-};
-export default Component;
+  Vue.Component(Component.name, Component)
+}
+export default Component

@@ -1,6 +1,6 @@
-import Component from "./colorPicker";
+import Component from './colorPicker/index.vue'
 
 Component.install = function(Vue) {
-  Vue.Component(Component.name, Component);
-};
-export default Component;
+  Vue.Component(Component.name, Component)
+}
+export default Component

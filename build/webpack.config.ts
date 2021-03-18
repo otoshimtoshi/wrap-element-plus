@@ -1,42 +1,19 @@
-const path = require('path')
-const { VueLoaderPlugin } = require('vue-loader')
+import path from 'path'
+import webpack from 'webpack'
+import { VueLoaderPlugin } from 'vue-loader'
+// just in case you run into any typescript error when configuring `devServer`
 
-const libMode = process.env.LIBMODE
-const isFullMode = libMode === 'full'
-let externals = [
-  {
-    vue: {
-      root: 'Vue',
-      commonjs: 'vue',
-      commonjs2: 'vue',
-    },
-  },
-]
-const plugins = [
-  new VueLoaderPlugin(),
-  // new BundleAnalyzerPlugin(),
-]
-
-const entry = path.resolve(__dirname, '../src/main.ts')
-
-const config = {
+const config: webpack.Configuration = {
   mode: 'production',
-  entry,
+  entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, '../lib'),
-    publicPath: '/',
-    filename: isFullMode ? 'index.full.js' : 'index.js',
-    libraryTarget: 'umd',
-    library: 'ElementPlus',
-    umdNamedDefine: true,
-    globalObject: "typeof self !== 'undefined' ? self : this",
+    publicPath: '.',
+    filename: 'foo.bundle.js',
   },
   module: {
     rules: [
-      {
-        test: /\.vue$/,
-        use: 'vue-loader',
-      },
+      { test: /\.vue$/, use: 'vue-loader' },
       {
         test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
@@ -44,11 +21,19 @@ const config = {
       },
     ],
   },
+  plugins: [new VueLoaderPlugin()],
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
   },
-  externals,
-  plugins,
+  externals: [
+    {
+      vue: {
+        root: 'Vue',
+        commonjs: 'vue',
+        commonjs2: 'vue',
+      },
+    },
+  ],
 }
 
-module.exports = config
+export default config

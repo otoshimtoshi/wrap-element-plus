@@ -1,6 +1,6 @@
-import Component from "./radioButton";
+import Component from './radioButton/index.vue'
 
 Component.install = function(Vue) {
-  Vue.Component(Component.name, Component);
-};
-export default Component;
+  Vue.Component(Component.name, Component)
+}
+export default Component

@@ -1,4 +1,4 @@
-import Component from './breadcrumbItem'
+import Component from './breadcrumbItem/index.vue'
 
 Component.install = function(Vue) {
   Vue.Component(Component.name, Component)
