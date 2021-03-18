@@ -3,14 +3,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import ELBadge from "element-plus/lib/el-badge";
+import { defineComponent } from 'vue'
+import ELBadge from 'element-plus/lib/el-badge'
 
 export default defineComponent({
-  name: "JBadge",
+  name: 'JBadge',
   components: {
     ELBadge,
   },
   setup() {},
-});
+})
 </script>

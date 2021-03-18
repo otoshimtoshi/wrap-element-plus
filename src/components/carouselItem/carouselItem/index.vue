@@ -3,14 +3,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import ELCarouselItem from "element-plus/lib/el-carousel-item";
+import { defineComponent } from 'vue'
+import ELCarouselItem from 'element-plus/lib/el-carousel-item'
 
 export default defineComponent({
-  name: "JCarouselItem",
+  name: 'JCarouselItem',
   components: {
     ELCarouselItem,
   },
   setup() {},
-});
+})
 </script>

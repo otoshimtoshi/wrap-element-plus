@@ -3,14 +3,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import ELAutocomplete from "element-plus/lib/el-autocomplete";
+import { defineComponent } from 'vue'
+import ELAutocomplete from 'element-plus/lib/el-autocomplete'
 
 export default defineComponent({
-  name: "JAutocomplete",
+  name: 'JAutocomplete',
   components: {
     ELAutocomplete,
   },
   setup() {},
-});
+})
 </script>

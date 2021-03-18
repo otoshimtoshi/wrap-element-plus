@@ -3,14 +3,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import ELBreadcrumbItem from "element-plus/lib/el-breadcrumb-item";
+import { defineComponent } from 'vue'
+import ELBreadcrumbItem from 'element-plus/lib/el-breadcrumb-item'
 
 export default defineComponent({
-  name: "JBreadcrumbItem",
+  name: 'JBreadcrumbItem',
   components: {
     ELBreadcrumbItem,
   },
   setup() {},
-});
+})
 </script>

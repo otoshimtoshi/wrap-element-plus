@@ -3,14 +3,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import ELBacktop from "element-plus/lib/el-backtop";
+import { defineComponent } from 'vue'
+import ELBacktop from 'element-plus/lib/el-backtop'
 
 export default defineComponent({
-  name: "JBacktop",
+  name: 'JBacktop',
   components: {
     ELBacktop,
   },
   setup() {},
-});
+})
 </script>

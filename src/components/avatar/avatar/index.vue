@@ -3,14 +3,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import ELAvatar from "element-plus/lib/el-avatar";
+import { defineComponent } from 'vue'
+import ELAvatar from 'element-plus/lib/el-avatar'
 
 export default defineComponent({
-  name: "JAvatar",
+  name: 'JAvatar',
   components: {
     ELAvatar,
   },
   setup() {},
-});
+})
 </script>
