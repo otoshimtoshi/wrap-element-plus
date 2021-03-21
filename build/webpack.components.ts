@@ -39,6 +39,9 @@ const config: webpack.Configuration = {
       },
     },
   ],
+  optimization: {
+    minimize: false,
+  },
 }
 
 export default config
