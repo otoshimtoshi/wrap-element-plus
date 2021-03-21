@@ -86,7 +86,10 @@ import {
   ElMessage,
   ElMessageBox,
   ElNotification,
+  locale,
 } from 'element-plus'
+import { i18n } from 'element-plus/lib/locale'
+import { ja } from 'element-plus/lib/locale/lang/ja'
 
 const components = [
   Alert,
@@ -177,13 +180,102 @@ const plugins = [
   ElNotification,
 ]
 
+const version = '0.1.0'
+const install = (Vue, opts = {}) => {
+  locale.use(opts.locale || ja)
+  i18n(opts.i18n)
+
+  components.forEach(component => {
+    Vue.component(component.name, component)
+  })
+
+  plugins.forEach(plugin => {
+    Vue.use(plugin)
+  })
+}
 const app = createApp(App)
 
-components.forEach(component => {
-  app.component(component.name, component)
-})
-
-plugins.forEach(plugin => {
-  app.use(plugin)
-})
 app.mount('#app')
+
+export default {
+  version,
+  install,
+  Alert,
+  Aside,
+  Autocomplete,
+  Avatar,
+  Backtop,
+  Badge,
+  Breadcrumb,
+  BreadcrumbItem,
+  Button,
+  ButtonGroup,
+  Calendar,
+  Card,
+  Carousel,
+  CarouselItem,
+  Cascader,
+  CascaderPanel,
+  Checkbox,
+  CheckboxButton,
+  CheckboxGroup,
+  Col,
+  Collapse,
+  CollapseItem,
+  CollapseTransition,
+  ColorPicker,
+  Container,
+  DatePicker,
+  Dialog,
+  Divider,
+  Drawer,
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
+  Footer,
+  Form,
+  FormItem,
+  Header,
+  Icon,
+  Image,
+  Input,
+  InputNumber,
+  Link,
+  Main,
+  Menu,
+  MenuItem,
+  MenuItemGroup,
+  Option,
+  OptionGroup,
+  PageHeader,
+  Pagination,
+  Popconfirm,
+  Popover,
+  Popper,
+  Progress,
+  Radio,
+  RadioButton,
+  RadioGroup,
+  Rate,
+  Row,
+  Scrollbar,
+  Select,
+  Slider,
+  Step,
+  Steps,
+  Submenu,
+  Switch,
+  TabPane,
+  Table,
+  TableColumn,
+  Tabs,
+  Tag,
+  TimePicker,
+  TimeSelect,
+  Timeline,
+  TimelineItem,
+  Tooltip,
+  Transfer,
+  Tree,
+  Upload,
+}
