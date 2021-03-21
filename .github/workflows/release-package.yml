@@ -19,7 +19,6 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.PRIVATE_KEY}}
       - name: package-version-to-git-tag
-        uses: pkgdeps/action-package-version-to-git-tag@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           github_repo: ${{ github.repository }}
