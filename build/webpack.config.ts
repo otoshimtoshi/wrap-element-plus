@@ -11,7 +11,7 @@ const config: webpack.Configuration = {
     filename: 'index.js',
     libraryExport: 'default',
     library: 'WrapElementPlus',
-    libraryTarget: 'umd',
+    libraryTarget: 'commonjs2',
   },
   module: {
     rules: [

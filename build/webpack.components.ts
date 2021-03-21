@@ -13,7 +13,7 @@ const config: webpack.Configuration = {
     chunkFilename: '[id].js',
     libraryExport: 'default',
     library: 'WrapElementPlus',
-    libraryTarget: 'umd',
+    libraryTarget: 'commonjs2',
   },
   module: {
     rules: [
