@@ -1,14 +1,16 @@
 import path from 'path'
 import webpack from 'webpack'
 import { VueLoaderPlugin } from 'vue-loader'
+const Components = require('../components.json')
 
 const config: webpack.Configuration = {
   mode: 'production',
-  entry: './src/main.js',
+  entry: Components,
   output: {
     path: path.resolve(__dirname, '../lib'),
     publicPath: '.',
-    filename: 'index.js',
+    filename: '[name].js',
+    chunkFilename: '[id].js',
     libraryExport: 'default',
     library: 'WrapElementPlus',
     libraryTarget: 'umd',

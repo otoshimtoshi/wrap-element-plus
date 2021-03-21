@@ -4,10 +4,9 @@
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build:lib": "webpack --config ./build/webpack.config.ts",
+    "build:lib": "webpack --config ./build/webpack.config.ts && webpack --config ./build/webpack.components.ts",
     "build:gulp": "gulp build",
-    "build:vue": "vue-cli-service build",
-    "build:all": "gulp build && vue-cli-service build",
+    "build:all": "npm run build:gulp && npm run build:lib",
     "lint": "vue-cli-service lint"
   },
   "author": "Masatoshi Otoshi",
@@ -16,9 +15,9 @@
     "element-plus"
   ],
   "license": "MIT",
-  "main": "dist/js/index.js",
+  "main": "lib/main.common.js",
   "files": [
-    "dist",
+    "lib",
     "vetur"
   ],
   "publishConfig": {
